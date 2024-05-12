@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Imaging.jpeg,
-  Vcl.Imaging.pngimage, Vcl.StdCtrls, Vcl.Buttons;
+  Vcl.Imaging.pngimage, Vcl.StdCtrls;
 
 type
   TFrmLogin = class(TForm)
@@ -16,7 +16,6 @@ type
     Image2: TImage;
     txtUsername: TEdit;
     txtPassword: TEdit;
-    SpeedButton1: TSpeedButton;
     procedure FormCreate(Sender: TObject);
     procedure FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer;
       var Resize: Boolean);

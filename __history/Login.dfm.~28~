@@ -1,10 +1,9 @@
 object FrmLogin: TFrmLogin
   Left = 0
   Top = 0
-  BorderStyle = bsNone
   Caption = 'FrmLogin'
-  ClientHeight = 664
-  ClientWidth = 1095
+  ClientHeight = 625
+  ClientWidth = 1079
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,8 +18,8 @@ object FrmLogin: TFrmLogin
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1095
-    Height = 664
+    Width = 1079
+    Height = 625
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
@@ -31,8 +30,8 @@ object FrmLogin: TFrmLogin
     object Image1: TImage
       Left = 1
       Top = 1
-      Width = 1093
-      Height = 662
+      Width = 1077
+      Height = 623
       Align = alClient
       Picture.Data = {
         0A544A504547496D616765AB060300FFD8FFE10C494578696600004D4D002A00
@@ -6234,10 +6233,8 @@ object FrmLogin: TFrmLogin
         C1AC1955A7933CCEAE544FD4556B2B89F79541D0CA7ABB6A6BBD1E774D7135DD
         21B925FA0A8AAF4B26531E68AA186D2328C927115AEA6899FFD9}
       Stretch = True
-      ExplicitLeft = 496
-      ExplicitTop = 280
-      ExplicitWidth = 105
-      ExplicitHeight = 105
+      ExplicitLeft = 2
+      ExplicitTop = 0
     end
     object pnlLogin: TPanel
       Left = 360
@@ -6563,6 +6560,47 @@ object FrmLogin: TFrmLogin
         ExplicitTop = 136
         ExplicitWidth = 105
         ExplicitHeight = 105
+      end
+      object SpeedButton1: TSpeedButton
+        Left = 32
+        Top = 216
+        Width = 281
+        Height = 33
+        Caption = 'ENTRAR'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBackground
+        Font.Height = -15
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+      end
+      object txtUsername: TEdit
+        Left = 64
+        Top = 112
+        Width = 241
+        Height = 23
+        BorderStyle = bsNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+      end
+      object txtPassword: TEdit
+        Left = 64
+        Top = 166
+        Width = 241
+        Height = 25
+        BorderStyle = bsNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 1
       end
     end
   end

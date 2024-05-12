@@ -1,8 +1,6 @@
 object FrmLogin: TFrmLogin
   Left = 0
   Top = 0
-  Align = alClient
-  BorderStyle = bsSingle
   Caption = 'FrmLogin'
   ClientHeight = 625
   ClientWidth = 1079
@@ -14,6 +12,8 @@ object FrmLogin: TFrmLogin
   Font.Style = []
   Position = poDesktopCenter
   WindowState = wsMaximized
+  OnCanResize = FormCanResize
+  OnCreate = FormCreate
   TextHeight = 15
   object Panel1: TPanel
     Left = 0
@@ -6233,17 +6233,15 @@ object FrmLogin: TFrmLogin
         C1AC1955A7933CCEAE544FD4556B2B89F79541D0CA7ABB6A6BBD1E774D7135DD
         21B925FA0A8AAF4B26531E68AA186D2328C927115AEA6899FFD9}
       Stretch = True
-      ExplicitLeft = 496
-      ExplicitTop = 280
-      ExplicitWidth = 105
-      ExplicitHeight = 105
+      ExplicitLeft = 2
+      ExplicitTop = 0
     end
-    object Panel2: TPanel
+    object pnlLogin: TPanel
       Left = 360
       Top = 168
       Width = 348
       Height = 327
-      Caption = 'Panel2'
+      Caption = 'pnlLogin'
       TabOrder = 0
       object Image2: TImage
         Left = 1
@@ -6562,6 +6560,34 @@ object FrmLogin: TFrmLogin
         ExplicitTop = 136
         ExplicitWidth = 105
         ExplicitHeight = 105
+      end
+      object txtUsername: TEdit
+        Left = 64
+        Top = 112
+        Width = 241
+        Height = 23
+        BorderStyle = bsNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+      end
+      object txtPassword: TEdit
+        Left = 64
+        Top = 166
+        Width = 241
+        Height = 25
+        BorderStyle = bsNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 1
       end
     end
   end

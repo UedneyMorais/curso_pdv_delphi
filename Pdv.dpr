@@ -2,13 +2,15 @@ program Pdv;
 
 uses
   Vcl.Forms,
-  Login in 'Login.pas' {Form1};
+  Login in 'Login.pas' {FrmLogin},
+  Users in 'Cadastros\Users.pas' {FrmUsers};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TFrmLogin, FrmLogin);
+  Application.CreateForm(TFrmUsers, FrmUsers);
   Application.Run;
 end.

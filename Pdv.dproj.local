@@ -1,12 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2024/05/12 08:12:40.291,=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/05/12 08:12:53.625,C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Login.pas=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/05/12 08:12:53.625,C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Login.dfm=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2024/05/12 08:13:10.241,C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Pdv.dproj=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2024/05/12 08:16:49.733,=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Unit2.pas</Transaction>
-    <Transaction>2024/05/12 08:17:34.354,C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Cadastros\Users.pas=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Unit2.pas</Transaction>
-    <Transaction>2024/05/12 08:17:34.354,C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Cadastros\Users.dfm=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Unit2.dfm</Transaction>
+	<Transactions>
+    <Transaction>2024/05/12 08:12:40.000.291,=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/05/12 08:12:53.000.625,C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Login.pas=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/05/12 08:12:53.000.625,C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Login.dfm=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/05/12 08:13:10.000.241,C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Pdv.dproj=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/05/12 08:16:49.000.733,=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Unit2.pas</Transaction>
+    <Transaction>2024/05/12 08:17:34.000.354,C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Cadastros\Users.dfm=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Unit2.dfm</Transaction>
+    <Transaction>2024/05/12 08:17:34.000.354,C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Cadastros\Users.pas=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Unit2.pas</Transaction>
+    <Transaction>2024/05/12 09:18:31.000.992,=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Unit1.pas</Transaction>
+    <Transaction>2024/05/12 09:20:33.000.387,=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Unit1.pas</Transaction>
+    <Transaction>2024/05/12 09:20:45.000.955,C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\DbModule.pas=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Unit1.pas</Transaction>
+    <Transaction>2024/05/12 09:20:45.000.955,C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\DbModule.dfm=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/05/12 10:52:19.000.059,=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Unit1.pas</Transaction>
+    <Transaction>2024/05/12 10:52:46.000.572,C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Menu.pas=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Unit1.pas</Transaction>
+    <Transaction>2024/05/12 10:52:46.000.572,C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Menu.dfm=C:\Users\concretize-uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_delphi\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>

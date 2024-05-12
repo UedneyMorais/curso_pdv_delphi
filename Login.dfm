@@ -23,10 +23,6 @@ object FrmLogin: TFrmLogin
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
-    ExplicitLeft = 232
-    ExplicitTop = 264
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object Image1: TImage
       Left = 1
       Top = 1
@@ -6575,6 +6571,7 @@ object FrmLogin: TFrmLogin
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
+        OnClick = SpeedButton1Click
       end
       object txtUsername: TEdit
         Left = 64
@@ -6602,6 +6599,7 @@ object FrmLogin: TFrmLogin
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
+        PasswordChar = '*'
         TabOrder = 1
       end
     end

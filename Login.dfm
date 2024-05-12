@@ -10,7 +10,5 @@ object Form1: TForm1
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Position = poDesktopCenter
-  WindowState = wsMaximized
   TextHeight = 15
 end

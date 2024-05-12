@@ -3,7 +3,9 @@ program Pdv;
 uses
   Vcl.Forms,
   Login in 'Login.pas' {FrmLogin},
-  Users in 'Cadastros\Users.pas' {FrmUsers};
+  Users in 'Cadastros\Users.pas' {FrmUsers},
+  DbModule in 'DbModule.pas' {dm: TDataModule},
+  Menu in 'Menu.pas' {FrmMenu};
 
 {$R *.res}
 
@@ -11,6 +13,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFrmLogin, FrmLogin);
-  Application.CreateForm(TFrmUsers, FrmUsers);
+  Application.CreateForm(Tdm, dm);
   Application.Run;
 end.

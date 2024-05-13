@@ -1,0 +1,29 @@
+object FrmMenu: TFrmMenu
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'PDV'
+  ClientHeight = 596
+  ClientWidth = 849
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Menu = MainMenu1
+  Position = poDesktopCenter
+  WindowState = wsMaximized
+  TextHeight = 15
+  object MainMenu1: TMainMenu
+    Left = 8
+    object Cadastro1: TMenuItem
+      Caption = 'Cadastro'
+      object Cadastro2: TMenuItem
+        Caption = 'Usuario'
+        OnClick = Cadastro2Click
+      end
+    end
+  end
+end

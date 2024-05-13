@@ -40,8 +40,6 @@ uses DbModule, Menu;
 
 procedure TFrmLogin.centerPanel;
 begin
-  txtUsername.Text := 'uedney';
-   txtPassword.Text := '123';
   pnlLogin.Top := (Self.Height div 2) - (pnlLogin.Height div 2);
   pnlLogin.Left := (Self.Width div 2) - (pnlLogin.Width div 2)
 end;
@@ -75,7 +73,7 @@ begin
   begin
     ShowMessage('Preencha o campo senha.');
     txtPassword.SetFocus;
-
+     exit;
   end
   else
   begin
@@ -92,16 +90,16 @@ begin
     // Verifica se a consulta retornou resultados
     if not dm.query_users.IsEmpty then
     begin
-      FrmMenu := TFrmMenu.Create(Self); // Alteração aqui
+      FrmMenu := TFrmMenu.Create(nil); // Alteração aqui
       FrmMenu.Show; // Se desejar que o formulário seja modal
-       // Libera a memória alocada para o formulári
-
+      FrmMenu.Free; // Libera a memória alocada para o formulári
+      exit;
     end
     else
     begin
       // Se não houver resultados, exibe uma mensagem de erro
       ShowMessage('Usuário ou senha incorretos.');
-
+      exit;
     end;
   end;
 end;

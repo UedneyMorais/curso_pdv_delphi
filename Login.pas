@@ -40,6 +40,8 @@ uses DbModule, Menu;
 
 procedure TFrmLogin.centerPanel;
 begin
+  txtUsername.Text := 'uedney';
+   txtPassword.Text := '123';
   pnlLogin.Top := (Self.Height div 2) - (pnlLogin.Height div 2);
   pnlLogin.Left := (Self.Width div 2) - (pnlLogin.Width div 2)
 end;

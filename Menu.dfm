@@ -22,6 +22,7 @@ object FrmMenu: TFrmMenu
       Caption = 'Cadastro'
       object Cadastro2: TMenuItem
         Caption = 'Usuario'
+        OnClick = Cadastro2Click
       end
     end
   end

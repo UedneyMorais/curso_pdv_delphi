@@ -16,6 +16,7 @@ type
     FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink;
     tb_users: TFDTable;
     query_users: TFDQuery;
+    dsUsers: TDataSource;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }

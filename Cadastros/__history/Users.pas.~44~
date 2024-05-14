@@ -1,0 +1,125 @@
+unit Users;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Mask, Vcl.StdCtrls, Data.DB,
+  Vcl.Grids, Vcl.DBGrids, Vcl.Buttons;
+
+type
+  TFrmUsers = class(TForm)
+    Label1: TLabel;
+    txtName: TEdit;
+    Label2: TLabel;
+    txtAddress: TEdit;
+    Label4: TLabel;
+    Label5: TLabel;
+    txtUsername: TEdit;
+    Label6: TLabel;
+    txtPassword: TEdit;
+    Label7: TLabel;
+    txtPhone: TMaskEdit;
+    txtCpf: TMaskEdit;
+    DBGrid1: TDBGrid;
+    btnNew: TSpeedButton;
+    btnEdit: TSpeedButton;
+    btnSave: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    procedure FormCreate(Sender: TObject);
+    procedure btnNewClick(Sender: TObject);
+    procedure btnSaveClick(Sender: TObject);
+  private
+    { Private declarations }
+    procedure associateFields;
+    procedure blockFields;
+    procedure enableFields;
+
+    function removeCharactereFromString(value: String) : String;
+
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmUsers: TFrmUsers;
+
+implementation
+
+{$R *.dfm}
+{ TFrmUsers }
+
+uses DbModule;
+
+procedure TFrmUsers.associateFields;
+begin
+  dm.tb_users.FieldByName('name').Value := txtName.Text;
+  dm.tb_users.FieldByName('cpf').Value := removeCharactereFromString(txtCpf.Text);
+  dm.tb_users.FieldByName('address').Value := txtAddress.Text;
+  dm.tb_users.FieldByName('phone').Value := txtPhone.Text;
+  dm.tb_users.FieldByName('username').Value := txtUsername.Text;
+  dm.tb_users.FieldByName('password').Value := txtPassword.Text;
+
+end;
+
+procedure TFrmUsers.blockFields;
+begin
+  txtName.Enabled := False;
+  txtCpf.Enabled := False;
+  txtAddress.Enabled := False;
+  txtPhone.Enabled := False;
+  txtUsername.Enabled := False;
+  txtPassword.Enabled := False;
+end;
+
+procedure TFrmUsers.btnNewClick(Sender: TObject);
+begin
+
+  btnNew.Enabled := False;
+  btnEdit.Enabled := False;
+  btnSave.Enabled := True;
+  enableFields();
+
+  dm.tb_users.Insert;
+
+end;
+
+procedure TFrmUsers.btnSaveClick(Sender: TObject);
+begin
+  associateFields();
+  dm.tb_users.Post;
+  blockFields();
+  btnSave.Enabled := false;
+  btnNew.Enabled := true;
+  ShowMessage('Usuário salvo com sucesso!');
+end;
+
+procedure TFrmUsers.enableFields;
+begin
+  txtName.Enabled := True;
+  txtCpf.Enabled := True;
+  txtAddress.Enabled := True;
+  txtPhone.Enabled := True;
+  txtUsername.Enabled := True;
+  txtPassword.Enabled := True;
+end;
+
+procedure TFrmUsers.FormCreate(Sender: TObject);
+begin
+
+  dm.tb_users.Active := True;
+  blockFields();
+end;
+
+function TFrmUsers.removeCharactereFromString(value: String): String;
+var valueReplaced: String;
+begin
+  valueReplaced := value.Replace('.', '').Replace('-','').Replace('(', '').Replace(')', '');
+
+
+
+   Result := valueReplaced;
+end;
+
+end.

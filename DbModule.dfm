@@ -37,4 +37,9 @@ object dm: Tdm
     Left = 32
     Top = 168
   end
+  object dsUsers: TDataSource
+    DataSet = query_users
+    Left = 32
+    Top = 224
+  end
 end

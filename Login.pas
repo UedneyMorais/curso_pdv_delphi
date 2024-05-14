@@ -41,7 +41,7 @@ uses DbModule, Menu;
 procedure TFrmLogin.centerPanel;
 begin
   txtUsername.Text := 'uedney';
-   txtPassword.Text := '123';
+  txtPassword.Text := '123';
   pnlLogin.Top := (Self.Height div 2) - (pnlLogin.Height div 2);
   pnlLogin.Left := (Self.Width div 2) - (pnlLogin.Width div 2)
 end;
@@ -94,7 +94,7 @@ begin
     begin
       FrmMenu := TFrmMenu.Create(Self); // Alteração aqui
       FrmMenu.Show; // Se desejar que o formulário seja modal
-       // Libera a memória alocada para o formulári
+      // Libera a memória alocada para o formulári
 
     end
     else

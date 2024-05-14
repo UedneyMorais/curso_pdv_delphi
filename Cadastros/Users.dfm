@@ -12,6 +12,7 @@ object FrmUsers: TFrmUsers
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poDesktopCenter
+  OnCreate = FormCreate
   TextHeight = 15
   object Label1: TLabel
     Left = 8
@@ -142,6 +143,7 @@ object FrmUsers: TFrmUsers
       FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
       FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
       FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+    OnClick = btnNewClick
   end
   object btnEdit: TSpeedButton
     Left = 90
@@ -237,6 +239,7 @@ object FrmUsers: TFrmUsers
     Width = 81
     Height = 22
     Caption = 'Salvar'
+    Enabled = False
     Glyph.Data = {
       FA090000424DFA09000000000000360000002800000019000000190000000100
       200000000000C4090000120B0000120B00000000000000000000FFFFFF00FFFF
@@ -318,6 +321,7 @@ object FrmUsers: TFrmUsers
       FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
       FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
       FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
+    OnClick = btnSaveClick
   end
   object SpeedButton3: TSpeedButton
     Left = 264
@@ -325,6 +329,7 @@ object FrmUsers: TFrmUsers
     Width = 81
     Height = 22
     Caption = 'Excluir'
+    Enabled = False
     Glyph.Data = {
       FA090000424DFA09000000000000360000002800000019000000190000000100
       200000000000C4090000120B0000120B00000000000000000000FFFFFF00FFFF
@@ -421,7 +426,7 @@ object FrmUsers: TFrmUsers
     Height = 23
     TabOrder = 3
   end
-  object Edit4: TEdit
+  object txtUsername: TEdit
     Left = 66
     Top = 133
     Width = 143
@@ -458,13 +463,60 @@ object FrmUsers: TFrmUsers
   object DBGrid1: TDBGrid
     Left = 8
     Top = 177
-    Width = 401
+    Width = 548
     Height = 193
+    DataSource = dm.dsUsers
     TabOrder = 6
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'coduser'
+        Title.Caption = 'C'#243'digo'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'name'
+        Title.Caption = 'Nome'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'cpf'
+        Title.Caption = 'CPF'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'address'
+        Title.Caption = 'Endere'#231'o'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'phone'
+        Title.Caption = 'Telefone'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'codposition'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'username'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'password'
+        Visible = True
+      end>
   end
 end

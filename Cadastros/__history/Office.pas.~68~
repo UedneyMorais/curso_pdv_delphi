@@ -1,0 +1,172 @@
+unit Office;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.StdCtrls, Data.DB,
+  Vcl.Grids, Vcl.DBGrids;
+
+type
+  TFrmOffice = class(TForm)
+    btnNew: TSpeedButton;
+    btnEdit: TSpeedButton;
+    btnSave: TSpeedButton;
+    btnDelete: TSpeedButton;
+    Label1: TLabel;
+    txtCargo: TEdit;
+    DBGrid1: TDBGrid;
+    procedure btnNewClick(Sender: TObject);
+    procedure btnSaveClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    function validateFields(): String;
+    procedure btnEditClick(Sender: TObject);
+    procedure DBGrid1CellClick(Column: TColumn);
+
+  private
+    { Private declarations }
+    procedure associateFields;
+    procedure blockFields;
+    procedure enableFields;
+    procedure listOffice;
+    procedure cleanFields;
+
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmOffice: TFrmOffice;
+  id: String;
+  isEditing: boolean;
+
+implementation
+
+{$R *.dfm}
+
+uses DbModule;
+
+procedure TFrmOffice.associateFields;
+begin
+  dm.tb_office.FieldByName('office').Value := txtCargo.Text;
+end;
+
+procedure TFrmOffice.blockFields;
+begin
+  txtCargo.Enabled := False;
+end;
+
+procedure TFrmOffice.btnEditClick(Sender: TObject);
+begin
+  isEditing := True;
+  dm.tb_office.Edit;
+  enableFields();
+  btnEdit.Enabled := False;
+  btnSave.Enabled := True;
+  associateFields();
+end;
+
+procedure TFrmOffice.btnNewClick(Sender: TObject);
+begin
+  btnNew.Enabled := False;
+  btnEdit.Enabled := False;
+  btnSave.Enabled := True;
+  enableFields();
+  isEditing := False;
+  dm.tb_office.Insert;
+end;
+
+procedure TFrmOffice.btnSaveClick(Sender: TObject);
+begin
+
+  if validateFields <> '' then
+  begin
+    ShowMessage('Por favor preencha o campo' + validateFields);
+  end
+  else
+  begin
+
+    if isEditing then
+    begin
+      dm.query_office.Close;
+      dm.query_office.SQL.Clear;
+      dm.query_office.SQL.Add
+        ('UPDATE office SET office = :office WHERE codoffice = :codoffice;');
+      dm.query_office.ParamByName('office').AsString := txtCargo.Text;
+      dm.query_office.ParamByName('codoffice').AsString := id;
+      dm.query_office.ExecSQL;
+      btnEdit.Enabled := False;
+      btnSave.Enabled := False;
+      btnNew.Enabled := True;
+      blockFields;
+      listOffice;
+      cleanFields;
+      ShowMessage('Usuário atualizado com sucesso.');
+    end
+    else if not isEditing then
+    begin
+      associateFields();
+      dm.tb_office.Post;
+      listOffice();
+      cleanFields();
+      blockFields();
+      ShowMessage('Cargo cadastrado com sucesso!');
+    end;
+
+  end;
+
+end;
+
+procedure TFrmOffice.cleanFields;
+begin
+  txtCargo.Text := '';
+end;
+
+procedure TFrmOffice.DBGrid1CellClick(Column: TColumn);
+begin
+  btnEdit.Enabled := true;
+  btnDelete.Enabled := true;
+  btnNew.Enabled := False;
+  txtCargo.Text := DBGrid1.DataSource.DataSet.FieldByName('office').AsString;
+
+  id := dm.query_office.FieldByName('codoffice').value;
+end;
+
+procedure TFrmOffice.enableFields;
+begin
+  txtCargo.Enabled := True;
+end;
+
+procedure TFrmOffice.FormCreate(Sender: TObject);
+begin
+  dm.tb_office.Active := True;
+  blockFields();
+  listOffice();
+end;
+
+procedure TFrmOffice.listOffice;
+begin
+  dm.query_office.Close;
+  dm.query_office.SQL.Clear();
+  dm.query_office.SQL.Add('SELECT * FROM office ORDER BY office ASC;');
+  dm.query_office.Open();
+end;
+
+function TFrmOffice.validateFields: String;
+begin
+  if Trim(txtCargo.Text) = '' then
+  begin
+    txtCargo.SetFocus;
+    Result := ' cargo.';
+    exit;
+  end
+  else
+  begin
+    Result := '';
+    exit;
+  end;
+
+end;
+
+end.

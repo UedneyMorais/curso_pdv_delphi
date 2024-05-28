@@ -17,6 +17,13 @@ type
     tb_users: TFDTable;
     query_users: TFDQuery;
     dsUsers: TDataSource;
+    tb_office: TFDTable;
+    dsOffice: TDataSource;
+    query_office: TFDQuery;
+    tb_officecodoffice: TFDAutoIncField;
+    tb_officeoffice: TStringField;
+    query_officecodoffice: TFDAutoIncField;
+    query_officeoffice: TStringField;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }

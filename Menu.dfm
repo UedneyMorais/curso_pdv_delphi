@@ -4,7 +4,7 @@ object FrmMenu: TFrmMenu
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'PDV'
-  ClientHeight = 596
+  ClientHeight = 601
   ClientWidth = 849
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -23,6 +23,10 @@ object FrmMenu: TFrmMenu
       object Cadastro2: TMenuItem
         Caption = 'Usuario'
         OnClick = Cadastro2Click
+      end
+      object Cargo1: TMenuItem
+        Caption = 'Cargo'
+        OnClick = Cargo1Click
       end
     end
   end

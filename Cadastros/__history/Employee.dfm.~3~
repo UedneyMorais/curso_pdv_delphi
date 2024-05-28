@@ -1,0 +1,102 @@
+object FrmEmployee: TFrmEmployee
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de funcion'#225'rios'
+  ClientHeight = 441
+  ClientWidth = 667
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 8
+    Top = 128
+    Width = 36
+    Height = 15
+    Caption = 'Nome:'
+  end
+  object Label2: TLabel
+    Left = 376
+    Top = 128
+    Width = 24
+    Height = 15
+    Caption = 'CPF:'
+  end
+  object Label3: TLabel
+    Left = 519
+    Top = 128
+    Width = 47
+    Height = 15
+    Caption = 'Telefone:'
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 168
+    Width = 52
+    Height = 15
+    Caption = 'Endere'#231'o:'
+  end
+  object Label5: TLabel
+    Left = 376
+    Top = 168
+    Width = 35
+    Height = 15
+    Caption = 'Cargo:'
+  end
+  object txtName: TEdit
+    Left = 64
+    Top = 125
+    Width = 297
+    Height = 23
+    TabOrder = 0
+  end
+  object txtCpf: TMaskEdit
+    Left = 422
+    Top = 125
+    Width = 83
+    Height = 23
+    EditMask = '000.000.000-00;1;_'
+    MaxLength = 14
+    TabOrder = 1
+    Text = '   .   .   -  '
+  end
+  object txtPhone: TMaskEdit
+    Left = 572
+    Top = 125
+    Width = 84
+    Height = 23
+    EditMask = '(00)00000-0000;1;_'
+    MaxLength = 14
+    TabOrder = 2
+    Text = '(  )     -    '
+  end
+  object txtAddress: TEdit
+    Left = 64
+    Top = 165
+    Width = 297
+    Height = 23
+    TabOrder = 3
+  end
+  object cbOffice: TComboBox
+    Left = 422
+    Top = 165
+    Width = 145
+    Height = 23
+    TabOrder = 4
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 216
+    Width = 651
+    Height = 217
+    TabOrder = 5
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+  end
+end

@@ -2,8 +2,8 @@ object FrmLogin: TFrmLogin
   Left = 0
   Top = 0
   Caption = 'FrmLogin'
-  ClientHeight = 625
-  ClientWidth = 1079
+  ClientHeight = 713
+  ClientWidth = 1088
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,16 +18,18 @@ object FrmLogin: TFrmLogin
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1079
-    Height = 625
+    Width = 1088
+    Height = 713
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
+    ExplicitWidth = 148
+    ExplicitHeight = 0
     object Image1: TImage
       Left = 1
       Top = 1
-      Width = 1077
-      Height = 623
+      Width = 1086
+      Height = 711
       Align = alClient
       Picture.Data = {
         0A544A504547496D616765AB060300FFD8FFE10C494578696600004D4D002A00
@@ -6231,6 +6233,8 @@ object FrmLogin: TFrmLogin
       Stretch = True
       ExplicitLeft = 2
       ExplicitTop = 0
+      ExplicitWidth = 1077
+      ExplicitHeight = 623
     end
     object pnlLogin: TPanel
       Left = 360

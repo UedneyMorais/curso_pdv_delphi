@@ -1,0 +1,62 @@
+object dm: Tdm
+  OnCreate = DataModuleCreate
+  Height = 600
+  Width = 800
+  PixelsPerInch = 120
+  object fd: TFDConnection
+    Params.Strings = (
+      'Database=pdv'
+      'User_Name=root'
+      'Password=root'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 40
+    Top = 30
+  end
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    VendorLib = 
+      'C:\Users\uedney\Documents\Embarcadero\Studio\Projects\curso_pdv_' +
+      'delphi\libs\libmySQL.dll'
+    Left = 200
+    Top = 20
+  end
+  object tb_users: TFDTable
+    IndexFieldNames = 'coduser'
+    Connection = fd
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'pdv.users'
+    Left = 40
+    Top = 130
+  end
+  object query_users: TFDQuery
+    Connection = fd
+    SQL.Strings = (
+      'SELECT * FROM users u;')
+    Left = 80
+    Top = 162
+  end
+  object dsUsers: TDataSource
+    DataSet = query_users
+    Left = 132
+    Top = 188
+  end
+  object tb_office: TFDTable
+    Connection = fd
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'pdv.office'
+    Left = 176
+    Top = 104
+  end
+  object dsOffice: TDataSource
+    Left = 280
+    Top = 152
+  end
+  object query_office: TFDQuery
+    Connection = fd
+    SQL.Strings = (
+      'SELECT * FROM pdv.`office`;')
+    Left = 224
+    Top = 128
+  end
+end

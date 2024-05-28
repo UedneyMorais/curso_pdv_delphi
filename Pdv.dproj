@@ -142,6 +142,15 @@
             <Form>FrmMenu</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Cadastros\Employee.pas">
+            <Form>FrmEmployee</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Cadastros\Office.pas">
+            <Form>FrmOffice</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <None Include="ModelSupport_Pdv\default.txaPackage"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -168,6 +177,12 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="4">
+                <DeployFile LocalName="ModelSupport_Pdv\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="Win32\Debug\Pdv.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Pdv.exe</RemoteName>
@@ -1129,6 +1144,7 @@
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">True</Platform>
             </Platforms>
+            <ModelSupport>True</ModelSupport>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>

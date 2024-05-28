@@ -1,0 +1,40 @@
+unit Employee;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Data.DB,
+  Vcl.Grids, Vcl.DBGrids, Vcl.Buttons;
+
+type
+  TFrmEmployee = class(TForm)
+    Label1: TLabel;
+    txtName: TEdit;
+    Label2: TLabel;
+    txtCpf: TMaskEdit;
+    Label3: TLabel;
+    txtPhone: TMaskEdit;
+    Label4: TLabel;
+    txtAddress: TEdit;
+    Label5: TLabel;
+    cbOffice: TComboBox;
+    DBGrid1: TDBGrid;
+    btnNew: TSpeedButton;
+    btnEdit: TSpeedButton;
+    btnSave: TSpeedButton;
+    btnDelete: TSpeedButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmEmployee: TFrmEmployee;
+
+implementation
+
+{$R *.dfm}
+
+end.
